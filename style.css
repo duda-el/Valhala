@@ -17,6 +17,9 @@ header {
   background-image: url(IMG/BG\ photo.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .logo {
@@ -60,9 +63,10 @@ header {
 }
 
 .reg {
+  width: 155px;
   display: flex;
   gap: 15px;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -147,9 +151,58 @@ header {
   color: white;
 }
 
+.mainSec{
+  display: flex;
+  flex-direction: column;
+  margin-top: 250px;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 90px;
+  color: white;
+  font-weight: 100;
+}
+h3{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 25px;
+  color: white;
+  font-weight: 100;
+}
+
+.btn{
+  margin-top: 50px;
+  width: 280px;
+  height: 60px;
+  border-radius: 6px;
+  color: #3db8a5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  border: 2px solid #3db8a5;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: 0.2s ease;
+}
+
+.btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px 0 #3db8a5;
+}
+
 @media screen and (max-width: 700px) {
   .hero {
-    background-image: url(IMG/BG\ small\ photo.jpg);
+    background-image: url(IMG/BG\ small\ photo.jpg) !important;
+  }
+  .mainSec{
+    margin-top: 150px;
   }
 }
 
@@ -172,5 +225,8 @@ header {
   }
   .reg1 {
     margin-top: 15px;
+  }
+  .hero {
+    background-image: url(IMG/BG\ medium\ photo.jpg);
   }
 }
