@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url(IMG/BG\ photo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  width: 190px;
+  height: 61px;
+  background-image: url(IMG/logo.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.nav__links a,
+.lang h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: white;
+  text-decoration: none;
+}
+
+.overlay__content a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav__links li a {
+  transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #3db8a5;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.reg {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  width: 2px;
+  height: 25px;
+  background-color: white;
+}
+
+.console {
+  display: flex;
+  gap: 15px;
+}
+
+.xbox {
+  width: 24.5px;
+  height: 24px;
+  background-image: url(IMG/xbox\ icon.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.steam {
+  width: 24.5px;
+  height: 24px;
+  background-image: url(IMG/steam\ icon.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-image: url(IMG/BG\ photo.jpg);
+  background-size: cover;
+  overflow-x: hidden;
+  transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 20px;
+  display: block;
+}
+
+.reg1 {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.men {
+  display: none;
+}
+
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 40px;
+  color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .hero {
+    background-image: url(IMG/BG\ small\ photo.jpg);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .nav__links,
+  .cta,
+  .reg {
+    display: none;
+  }
+  .menu {
+    display: block;
+    padding: 2px 15px;
+    border-radius: 0;
+    background-color: white;
+  }
+  .men {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .reg1 {
+    margin-top: 15px;
+  }
+}
