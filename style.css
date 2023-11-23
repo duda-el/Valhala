@@ -108,8 +108,7 @@ header {
   z-index: 1;
   left: 0;
   top: 0;
-  background: linear-gradient(135deg, rgba(61, 184, 166, 0.657), rgba(37, 168, 148, 0.527));backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-image: url(IMG/BG\ photo.jpg);
   background-size: cover;
   overflow-x: hidden;
   transition: width 0.5s ease 0s;
@@ -210,9 +209,7 @@ h4{
   font-weight: 100;
 }
 
-.scrollDown img{
-  margin-top: 5px;
-}
+
 
 .aboutValhala{
   width: 100%;
@@ -227,7 +224,7 @@ h4{
     background-image: url(IMG/BG\ small\ photo.jpg) !important;
   }
   .mainSec{
-    margin-top: 70px;
+    margin-top: 80px;
   }
 }
 
@@ -253,11 +250,5 @@ h4{
   }
   .hero {
     background-image: url(IMG/BG\ medium\ photo.jpg);
-  }
-  .mainSec{
-    margin-top: 250px;
-  }
-  .scrollDown img{
-    margin-top: 5px;
   }
 }
