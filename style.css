@@ -472,7 +472,7 @@ h6 {
   }
   
   h6 {
-    font-size: 60px;
+    font-size: 50px;
     padding-left: 10px;
   }
   
@@ -496,15 +496,15 @@ h6 {
   }
   .item{
     width: 400px;
-    height: 400px;
+    height: 350px;
   }
   .item1{
     width: 400px;
-    height: 400px;
+    height: 350px;
   }
   .item2{
     width: 400px;
-    height: 400px;
+    height: 350px;
   }
   
 }
