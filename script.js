@@ -11,59 +11,78 @@ menuClose.addEventListener("click", () => {
   overlay.classList.remove("overlay--active");
 });
 
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const scrollDownLink = document.getElementById('scrollDownLink');
-  const aboutValhalaSection = document.getElementById('aboutValhala');
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollDownLink = document.getElementById("scrollDownLink");
+  const aboutValhalaSection = document.getElementById("aboutValhala");
 
   if (scrollDownLink && aboutValhalaSection) {
-    scrollDownLink.addEventListener('click', function() {
-      aboutValhalaSection.scrollIntoView({ behavior: 'smooth' });
+    scrollDownLink.addEventListener("click", function () {
+      aboutValhalaSection.scrollIntoView({ behavior: "smooth" });
     });
   }
 });
 
-ScrollReveal().reveal('.hero', { delay: 50 });
-ScrollReveal().reveal('.mainSec', { delay: 300 });
-ScrollReveal().reveal('header', { delay: 300 });
-ScrollReveal().reveal('.scroll', { delay: 300 });
-ScrollReveal().reveal('.leftContainer', { delay: 1000 });
-ScrollReveal().reveal('.rightContainer', { delay: 2000 });
+ScrollReveal().reveal(".hero", { delay: 50 });
+ScrollReveal().reveal(".mainSec", { delay: 300 });
+ScrollReveal().reveal("header", { delay: 300 });
+ScrollReveal().reveal(".scroll", { delay: 300 });
+ScrollReveal().reveal(".leftContainer", { delay: 500 });
+ScrollReveal().reveal(".rightContainer", { delay: 1000 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+//slider
+document.addEventListener("DOMContentLoaded", function () {
   const prevButton = document.getElementById("prev");
   const nextButton = document.getElementById("next");
   const img1 = document.querySelector(".item");
   const img2 = document.querySelector(".item1");
   const img3 = document.querySelector(".item2");
 
-  let currentIndex = 1; // 
+  let currentIndex = 1;
+  let intervalId;
 
-  prevButton.addEventListener("click", function() {
-    if (currentIndex === 2) {
-      img2.style.display = "none";
-      img1.style.display = "block";
-      currentIndex = 1;
-    } else if (currentIndex === 3) {
-      img3.style.display = "none";
-      img2.style.display = "block";
-      currentIndex = 2;
-    }
+  const slides = [img1, img2, img3];
+  const dots = document.querySelectorAll(".dot");
+
+  function showImage(index) {
+    slides.forEach((img, i) => {
+      img.style.display = i + 1 === index ? "block" : "none";
+    });
+
+    dots.forEach((dot) => {
+      dot.classList.remove("active");
+    });
+
+    dots[index - 1].classList.add("active");
+  }
+
+  function nextImage() {
+    currentIndex = currentIndex === 3 ? 1 : currentIndex + 1;
+    showImage(currentIndex);
+  }
+
+  function prevImage() {
+    currentIndex = currentIndex === 1 ? 3 : currentIndex - 1;
+    showImage(currentIndex);
+  }
+
+  intervalId = setInterval(nextImage, 3000);
+
+  prevButton.addEventListener("click", function () {
+    clearInterval(intervalId);
+    prevImage();
   });
 
-  nextButton.addEventListener("click", function() {
-    if (currentIndex === 1) {
-      img1.style.display = "none";
-      img2.style.display = "block";
-      currentIndex = 2;
-    } else if (currentIndex === 2) {
-      img2.style.display = "none";
-      img3.style.display = "block";
-      currentIndex = 3;
-    }
+  nextButton.addEventListener("click", function () {
+    clearInterval(intervalId);
+    nextImage();
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", function () {
+      clearInterval(intervalId);
+      currentIndex = index + 1;
+      showImage(currentIndex);
+    });
   });
 });
-
-
