@@ -235,6 +235,8 @@ h4 {
   align-items: center;
   padding-left: 80px;
   padding-right: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .leftContainer {
