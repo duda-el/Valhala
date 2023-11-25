@@ -235,8 +235,6 @@ h4 {
   align-items: center;
   padding-left: 80px;
   padding-right: 80px;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .leftContainer {
@@ -367,6 +365,8 @@ h6 {
     gap: 15px;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .leftContainer {
     flex-direction: column;
