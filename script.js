@@ -59,11 +59,18 @@ document.addEventListener("DOMContentLoaded", function () {
   function nextImage() {
     currentIndex = currentIndex === 3 ? 1 : currentIndex + 1;
     showImage(currentIndex);
+    restartInterval();
   }
 
   function prevImage() {
     currentIndex = currentIndex === 1 ? 3 : currentIndex - 1;
     showImage(currentIndex);
+    restartInterval();
+  }
+
+  function restartInterval() {
+    clearInterval(intervalId);
+    intervalId = setInterval(nextImage, 3000);
   }
 
   intervalId = setInterval(nextImage, 3000);
@@ -83,6 +90,8 @@ document.addEventListener("DOMContentLoaded", function () {
       clearInterval(intervalId);
       currentIndex = index + 1;
       showImage(currentIndex);
+      restartInterval();
     });
   });
 });
+
