@@ -219,10 +219,6 @@ h4 {
   font-weight: 100;
 }
 
-.scrollDown img:hover {
-  transform: scale(1.1);
-  transition: 0.2s ease;
-}
 
 .aboutValhala {
   width: 100%;
