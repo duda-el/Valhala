@@ -235,6 +235,7 @@ h4 {
   align-items: center;
   padding-left: 80px;
   padding-right: 80px;
+  padding-bottom: 20px;
 }
 
 .leftContainer {
@@ -354,12 +355,12 @@ h6 {
   .aboutValhala{
     flex-direction: column;
     justify-content: center;
+    gap: 15px;
     padding-left: 0;
     padding-right: 0;
   }
   .leftContainer {
     flex-direction: column;
-    margin-top: 20px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -409,7 +410,6 @@ h6 {
   }
   .slider{
     width: 100%;
-    gap: 15px;
     justify-content: center;
     align-items: center;
   }
