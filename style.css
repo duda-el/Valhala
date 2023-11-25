@@ -1,436 +1,88 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+//navBar
+const menuOpen = document.querySelector(".men");
+const menuClose = document.querySelector(".close");
+const overlay = document.querySelector(".overlay");
 
+menuOpen.addEventListener("click", () => {
+  overlay.classList.add("overlay--active");
+});
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-}
+menuClose.addEventListener("click", () => {
+  overlay.classList.remove("overlay--active");
+});
 
-.hero {
-  width: 100%;
-  height: 100vh;
-  background-image: url(IMG/BG\ photo.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollDownLink = document.getElementById("scrollDownLink");
+  const aboutValhalaSection = document.getElementById("aboutValhala");
 
-.logo {
-  width: 190px;
-  height: 61px;
-  background-image: url(IMG/logo.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
-.nav__links a,
-.lang h2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 17px;
-  color: white;
-  text-decoration: none;
-}
-
-.overlay__content a {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 17px;
-  color: white;
-  text-decoration: none;
-}
-
-.nav__links li a {
-  transition: color 0.3s ease 0s;
-}
-
-.nav__links li a:hover {
-  color: #3db8a5;
-}
-
-.nav__links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.reg {
-  width: 155px;
-  display: flex;
-  gap: 15px;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.line {
-  width: 2px;
-  height: 25px;
-  background-color: white;
-}
-
-.console {
-  display: flex;
-  gap: 15px;
-}
-
-.xbox {
-  width: 24.5px;
-  height: 24px;
-  background-image: url(IMG/xbox\ icon.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.steam {
-  width: 24.5px;
-  height: 24px;
-  background-image: url(IMG/steam\ icon.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.menu {
-  display: none;
-}
-
-.overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  background-image: url(IMG/BG\ small\ photo.jpg);
-  background-size: cover;
-  overflow-x: hidden;
-  transition: width 0.5s ease 0s;
-}
-
-.overlay--active {
-  width: 100%;
-}
-
-.overlay__content {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.overlay a {
-  padding: 15px;
-  font-size: 20px;
-  display: block;
-}
-
-.reg1 {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-}
-
-.men {
-  display: none;
-}
-
-.overlay .close {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 40px;
-  color: white;
-}
-
-.mainSec {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 90px;
-  color: white;
-  font-weight: 100;
-}
-h3 {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 25px;
-  color: white;
-  font-weight: 100;
-}
-
-.btn {
-  margin-top: 50px;
-  width: 280px;
-  height: 60px;
-  border-radius: 6px;
-  color: #3db8a5;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 15px;
-  border: 2px solid #3db8a5;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0)
-  );
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  transition: 0.2s ease;
-  cursor: pointer;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 32px 0 #3db8a5;
-}
-
-.scroll {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-top: 30px;
-  transition: 0.2s ease;
-}
-
-h4 {
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  color: white;
-  font-weight: 100;
-}
-
-.scrollDown img:hover {
-  transform: scale(1.1);
-  transition: 0.2s ease;
-}
-
-.aboutValhala {
-  width: 100%;
-  height: 100vh;
-  background-image: url(IMG/bg\ image\ 2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.leftContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-left: 80px;
-}
-
-h5 {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 30px;
-  color: white;
-  font-weight: 100;
-}
-
-h6 {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 80px;
-  color: white;
-  font-weight: 100;
-}
-
-.longLine {
-  width: 500px;
-  height: 3px;
-  background-color: white;
-}
-
-.asTxt {
-  width: 500px;
-  height: 200px;
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  color: white;
-  font-weight: 100;
-  text-align: right;
-}
-
-.rightContainer{
-  padding-right: 80px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.slider{
-  display: flex;
-  gap: 40px;
-}
-
-.item{
-  width: 450px;
-  height: 500px;
-  border: 2px solid #3db8a5;
-  border-radius: 6px;
-  background-image: url(IMG/Rectangle\ 23.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: 0.5s;
-}
-
-.item1{
-  display: none;
-  width: 450px;
-  height: 500px;
-  border: 2px solid #3db8a5;
-  border-radius: 6px;
-  background-image: url(IMG/Rectangle\ 24.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: 0.5s;
-}
-
-.item2{
-  display: none;
-  width: 450px;
-  height: 500px;
-  border: 2px solid #3db8a5;
-  border-radius: 6px;
-  background-image: url(IMG/Rectangle\ 25.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: 0.5s;
-}
-
-
-#next,#prev{
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.slider-dots {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.dot {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: none;
-  border: 2px solid #ccc;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: #ccc;
-}
-
-@media screen and (max-width: 700px) {
-  .hero {
-    background-image: url(IMG/BG\ small\ photo.jpg) !important;
+  if (scrollDownLink && aboutValhalaSection) {
+    scrollDownLink.addEventListener("click", function () {
+      aboutValhalaSection.scrollIntoView({ behavior: "smooth" });
+    });
   }
-  .aboutValhala{
-    flex-direction: column;
-    justify-content: center;
-  }
-  .leftContainer {
-    flex-direction: column;
-    padding-left: 0;
-    margin-top: 20px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  h5 {
-    font-size: 20px;
-    padding-left: 10px;
-  }
-  
-  h6 {
-    font-size: 50px;
-    padding-left: 10px;
-  }
-  
-  .longLine {
-    width: 90%;
-  }
-  
-  .asTxt {
-    width: 100%;
-    height: 180px;
-    font-size: 15px;
-    text-align: center;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  .rightContainer{
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding-right: 0;
-  }
-  .item{
-    width: 330px;
-    height: 350px;
-  }
-  .item1{
-    width: 330px;
-    height: 350px;
-  }
-  .item2{
-    width: 330px;
-    height: 350px;
-  }
-  .slider{
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-  }
-}
+});
 
-@media only screen and (max-width: 1100px) {
-  .nav__links,
-  .cta,
-  .reg {
-    display: none;
+ScrollReveal().reveal(".hero", { delay: 50 });
+ScrollReveal().reveal(".mainSec", { delay: 300 });
+ScrollReveal().reveal("header", { delay: 300 });
+ScrollReveal().reveal(".scroll", { delay: 300 });
+ScrollReveal().reveal(".leftContainer", { delay: 1000 });
+ScrollReveal().reveal(".rightContainer", { delay: 2000 });
+
+
+//slider
+document.addEventListener("DOMContentLoaded", function () {
+  const prevButton = document.getElementById("prev");
+  const nextButton = document.getElementById("next");
+  const img1 = document.querySelector(".item");
+  const img2 = document.querySelector(".item1");
+  const img3 = document.querySelector(".item2");
+
+  let currentIndex = 1;
+  let intervalId;
+
+  const slides = [img1, img2, img3];
+  const dots = document.querySelectorAll(".dot");
+
+  function showImage(index) {
+    slides.forEach((img, i) => {
+      img.style.display = i + 1 === index ? "block" : "none";
+    });
+
+    dots.forEach((dot) => {
+      dot.classList.remove("active");
+    });
+
+    dots[index - 1].classList.add("active");
   }
-  .menu {
-    display: block;
-    padding: 2px 15px;
-    border-radius: 0;
-    background-color: white;
+
+  function nextImage() {
+    currentIndex = currentIndex === 3 ? 1 : currentIndex + 1;
+    showImage(currentIndex);
   }
-  .men {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+
+  function prevImage() {
+    currentIndex = currentIndex === 1 ? 3 : currentIndex - 1;
+    showImage(currentIndex);
   }
-  .reg1 {
-    margin-top: 15px;
-  }
-  .hero {
-    background-image: url(IMG/BG\ medium\ photo.jpg);
-  }
-}
+
+  intervalId = setInterval(nextImage, 3000);
+
+  prevButton.addEventListener("click", function () {
+    clearInterval(intervalId);
+    prevImage();
+  });
+
+  nextButton.addEventListener("click", function () {
+    clearInterval(intervalId);
+    nextImage();
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", function () {
+      clearInterval(intervalId);
+      currentIndex = index + 1;
+      showImage(currentIndex);
+    });
+  });
+});
