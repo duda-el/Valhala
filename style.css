@@ -4,7 +4,6 @@
   padding: 0;
 }
 
-
 header {
   display: flex;
   justify-content: space-between;
@@ -219,7 +218,6 @@ h4 {
   font-weight: 100;
 }
 
-
 .aboutValhala {
   width: 100%;
   min-height: 100vh;
@@ -269,7 +267,7 @@ h6 {
   text-align: right;
 }
 
-.rightContainer{
+.rightContainer {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -277,12 +275,12 @@ h6 {
   align-items: center;
 }
 
-.slider{
+.slider {
   display: flex;
   gap: 40px;
 }
 
-.item{
+.item {
   width: 450px;
   height: 500px;
   border: 2px solid #3db8a5;
@@ -293,7 +291,7 @@ h6 {
   transition: 0.5s;
 }
 
-.item1{
+.item1 {
   display: none;
   width: 450px;
   height: 500px;
@@ -305,7 +303,7 @@ h6 {
   transition: 0.5s;
 }
 
-.item2{
+.item2 {
   display: none;
   width: 450px;
   height: 500px;
@@ -317,8 +315,8 @@ h6 {
   transition: 0.5s;
 }
 
-
-#next,#prev{
+#next,
+#prev {
   background: none;
   border: none;
   cursor: pointer;
@@ -343,64 +341,77 @@ h6 {
   background-color: #ccc;
 }
 
-.features{
+.features {
   width: 100%;
   min-height: 100vh;
   background-image: url(IMG/Features.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.system{
+.system {
   width: 100%;
   min-height: 100vh;
   background-image: url(IMG/system.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 }
 
-.text{
+.text {
   padding-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 20px;
 }
 
-.question{
+.question {
   font-family: "Bebas Neue", sans-serif;
   font-size: 30px;
   color: white;
   font-weight: 100;
 }
 
-.requir{
+.requir {
   font-family: "Bebas Neue", sans-serif;
   font-size: 80px;
   color: white;
   font-weight: 100;
 }
-.box{
+.box {
   padding-top: 70px;
   padding-left: 70px;
 }
-.lines{
+.lines {
   width: 500px;
   height: 350px;
   background-image: url(IMG/Box.svg);
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.first{
+span {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.first {
   padding-left: 12px;
   padding-top: 12px;
   display: flex;
   gap: 12px;
 }
 
-.first p{
+.first p {
   width: 230px;
   font-family: "Poppins", sans-serif;
   color: white;
@@ -411,7 +422,7 @@ h6 {
   .hero {
     background-image: url(IMG/BG\ small\ photo.jpg) !important;
   }
-  .aboutValhala{
+  .aboutValhala {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
@@ -426,21 +437,21 @@ h6 {
     align-items: center;
     text-align: center;
   }
-  
+
   h5 {
     font-size: 25px;
     padding-left: 10px;
   }
-  
+
   h6 {
     font-size: 50px;
     padding-left: 10px;
   }
-  
+
   .longLine {
     width: 90%;
   }
-  
+
   .asTxt {
     width: 100%;
     font-size: 14px;
@@ -448,37 +459,62 @@ h6 {
     padding-left: 5px;
     padding-right: 5px;
   }
-  .rightContainer{
+  .rightContainer {
     width: 100%;
     justify-content: center;
     align-items: center;
     gap: 10px;
   }
-  .item{
+  .item {
     width: 100%;
     height: 350px;
     border-radius: 0;
   }
-  .item1{
+  .item1 {
     width: 100%;
     height: 350px;
     border-radius: 0;
   }
-  .item2{
+  .item2 {
     width: 100%;
     height: 350px;
     border-radius: 0;
   }
-  .slider{
+  .slider {
     width: 100%;
     justify-content: center;
     align-items: center;
   }
-  #next,#prev{
+  #next,
+  #prev {
     display: none;
   }
-  .slider-dots{
+  .slider-dots {
     display: none;
+  }
+  .lines {
+    width: 357px;
+    height: 250px;
+    gap: 10px;
+  }
+  .first p {
+    width: 155px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 11px;
+  }
+  .question {
+    font-size: 20px;
+  }
+  span {
+    font-size: 15px !important;
+  }
+  .requir {
+    font-size: 60px;
+  }
+  .system {
+    justify-content: center !important;
+    align-items: center !important;
   }
 }
 
@@ -505,7 +541,7 @@ h6 {
   .hero {
     background-image: url(IMG/BG\ medium\ photo.jpg);
   }
-  .aboutValhala{
+  .aboutValhala {
     flex-direction: column;
     justify-content: center;
     gap: 5px;
@@ -520,21 +556,21 @@ h6 {
     align-items: center;
     text-align: center;
   }
-  
+
   h5 {
     font-size: 25px;
     padding-left: 10px;
   }
-  
+
   h6 {
     font-size: 70px;
     padding-left: 10px;
   }
-  
+
   .longLine {
     width: 90%;
   }
-  
+
   .asTxt {
     width: 100%;
     font-size: 17px;
@@ -542,30 +578,29 @@ h6 {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .rightContainer{
+  .rightContainer {
     width: 100%;
     justify-content: center;
     align-items: center;
     gap: 10px;
   }
-  .item{
+  .item {
     width: 400px;
     height: 350px;
   }
-  .item1{
+  .item1 {
     width: 400px;
     height: 350px;
   }
-  .item2{
+  .item2 {
     width: 400px;
     height: 350px;
   }
-  .box{
+  .box {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 50px;
     padding-left: 0;
   }
-  
 }
