@@ -11,6 +11,7 @@ menuClose.addEventListener("click", () => {
   overlay.classList.remove("overlay--active");
 });
 
+//Page Links
 document.addEventListener("DOMContentLoaded", function () {
   const scrollDownLink = document.getElementById("scrollDownLink");
   const aboutValhalaSection = document.getElementById("aboutValhala");
@@ -22,6 +23,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const navAbout = document.getElementById("aboutt");
+  const aboutValhalaSection = document.getElementById("aboutValhala");
+
+  if (navAbout && aboutValhalaSection) {
+    navAbout.addEventListener("click", function () {
+      aboutValhalaSection.scrollIntoView({ behavior: "smooth" });
+    });
+  }
+});
+
+//Reveal Animations
 ScrollReveal().reveal(".hero", { delay: 50 });
 ScrollReveal().reveal(".mainSec", { delay: 300 });
 ScrollReveal().reveal("header", { delay: 300 });
@@ -29,8 +42,7 @@ ScrollReveal().reveal(".scroll", { delay: 300 });
 ScrollReveal().reveal(".leftContainer", { delay: 500 });
 ScrollReveal().reveal(".rightContainer", { delay: 1000 });
 
-
-//slider
+//Slider
 document.addEventListener("DOMContentLoaded", function () {
   const prevButton = document.getElementById("prev");
   const nextButton = document.getElementById("next");
@@ -94,4 +106,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
