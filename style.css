@@ -515,6 +515,7 @@ span {
   .system {
     justify-content: center !important;
     align-items: center !important;
+    background-image: url(IMG/system2.jpg);
   }
 }
 
