@@ -418,6 +418,7 @@ span {
   font-size: 16px;
 }
 
+
 @media screen and (max-width: 700px) {
   .hero {
     background-image: url(IMG/BG\ small\ photo.jpg) !important;
@@ -493,8 +494,8 @@ span {
     display: none;
   }
   .lines {
-    width: 357px;
-    height: 250px;
+    width: 359px;
+    height: 252px;
     gap: 10px;
   }
   .first p {
@@ -517,9 +518,10 @@ span {
     align-items: center !important;
     background-image: url(IMG/system2.jpg);
   }
+
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1000px) {
   .nav__links,
   .cta,
   .reg {
@@ -542,6 +544,22 @@ span {
   .hero {
     background-image: url(IMG/BG\ medium\ photo.jpg);
   }
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-left: 0;
+  }
+  .system {
+    justify-content: center !important;
+    align-items: center !important;
+    background-image: url(IMG/system2.jpg);
+  }
+  
+}
+
+@media only screen and (max-width: 1250px) {
   .aboutValhala {
     flex-direction: column;
     justify-content: center;
@@ -587,21 +605,14 @@ span {
   }
   .item {
     width: 400px;
-    height: 350px;
+    height: 400px;
   }
   .item1 {
     width: 400px;
-    height: 350px;
+    height: 400px;
   }
   .item2 {
     width: 400px;
-    height: 350px;
-  }
-  .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    padding-left: 0;
+    height: 400px;
   }
 }
