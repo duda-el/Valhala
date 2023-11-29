@@ -41,6 +41,8 @@ ScrollReveal().reveal("header", { delay: 300 });
 ScrollReveal().reveal(".scroll", { delay: 300 });
 ScrollReveal().reveal(".leftContainer", { delay: 500 });
 ScrollReveal().reveal(".rightContainer", { delay: 1000 });
+ScrollReveal().reveal(".text", { delay: 500 });
+ScrollReveal().reveal(".box", { delay: 1500 });
 
 //Slider
 document.addEventListener("DOMContentLoaded", function () {
