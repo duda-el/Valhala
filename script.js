@@ -43,6 +43,8 @@ ScrollReveal().reveal(".leftContainer", { delay: 500 });
 ScrollReveal().reveal(".rightContainer", { delay: 1000 });
 ScrollReveal().reveal(".text", { delay: 500 });
 ScrollReveal().reveal(".box", { delay: 1000 });
+ScrollReveal().reveal(".inputContainer", { delay: 500 });
+ScrollReveal().reveal(".emailBtn", { delay: 500 });
 
 
 //Slider
