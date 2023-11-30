@@ -35,10 +35,14 @@
         </nav>
         <div class="reg">
           <div class="lang">
-            <h2>GEO</h2>
+            <a href="#">Sign Up</a>
             <div class="drop"></div>
           </div>
           <div class="line"></div>
+          <div class="lang">
+            <a href="#">Sign In</a>
+            <div class="drop"></div>
+          </div>
           <div class="console">
             <div class="xbox"></div>
             <div class="steam"></div>
@@ -61,11 +65,17 @@
           <a href="#">SYSTEM REQUIREMENTS</a>
           <a href="#">SUBSCRIBE</a>
           <div class="reg1">
-            <div class="lang">
-              <h2>GEO</h2>
-              <div class="drop"></div>
+            <div class="mainLang">
+              <div class="lang">
+                <a href="#" style="font-size: 17px">Sign Up</a>
+                <div class="drop"></div>
+              </div>
+              <div class="line"></div>
+              <div class="lang">
+                <a href="#" style="font-size: 17px">Sign Up</a>
+                <div class="drop"></div>
+              </div>
             </div>
-            <div class="line"></div>
             <div class="console">
               <div class="xbox"></div>
               <div class="steam"></div>
@@ -167,7 +177,28 @@
         </div>
       </div>
     </section>
-    
+
+    <section class="subs">
+      <div class="inputContainer">
+        <p class="small">WANT TO STAY IN TOUCH?</p>
+        <p class="big">NEWSLETTER SUBSCRIBE</p>
+        <p class="smaller">
+          In order to start receiving our news, all you have to do is enter your
+          email address. Everything else will be taken care of by us. We will
+          send you emails containing information about game. We don’t spam.
+        </p>
+        <div class="emailBtn">
+          <input
+            type="email"
+            placeholder="Your email address"
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Please enter a valid email address"
+          />
+          <button class="btn2">Subscribe Now</button>
+        </div>
+      </div>
+    </section>
 
     <script src="script.js"></script>
   </body>
