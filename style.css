@@ -32,12 +32,19 @@ header {
 }
 
 .nav__links a,
-.lang h2 {
+.lang a {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 17px;
   color: white;
   text-decoration: none;
+}
+
+.mainLang {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
 }
 
 .overlay__content a {
@@ -63,7 +70,7 @@ header {
 }
 
 .reg {
-  width: 155px;
+  width: 255px;
   display: flex;
   gap: 15px;
   justify-content: flex-end;
@@ -265,6 +272,7 @@ h6 {
   color: white;
   font-weight: 100;
   text-align: right;
+  
 }
 
 .rightContainer {
@@ -418,6 +426,71 @@ span {
   font-size: 16px;
 }
 
+.subs{
+  width: 100%;
+  height: 100vh;
+  background-image: url(IMG/subs.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+}
+
+
+.inputContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.small{
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.big{
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 80px;
+  font-weight: 100;
+}
+
+.smaller{
+  width: 600px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 15px;
+}
+.emailBtn{
+  display: flex;
+  gap: 15px;
+}
+
+input{
+  width: 280px;
+  height: 50px;
+  background-color: #1B1D1E;
+  border: 0;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  color: #7F8081;
+  padding-left: 20px;
+  margin-top: 40px;
+}
+
+.btn2{
+  width: 150px;
+  height: 50px;
+  background-color: #3db8a5;
+  border: 0;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-weight: 600;
+  margin-top: 40px;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 700px) {
   .hero {
@@ -459,6 +532,7 @@ span {
     text-align: center;
     padding-left: 5px;
     padding-right: 5px;
+    padding-bottom: 210px;
   }
   .rightContainer {
     width: 100%;
@@ -518,10 +592,57 @@ span {
     align-items: center !important;
     background-image: url(IMG/system2.jpg);
   }
+  .small{
+    font-size: 25px;
+  }
+  
+  .big{
+    font-size: 60px;
+  }
+  
+  .smaller{
+    width: 100%;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
+  .emailBtn{
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-left: 0;
+  }
+  .system {
+    justify-content: center !important;
+    align-items: center !important;
+    background-image: url(IMG/system2.jpg);
+  }
+  .subs{
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    background-image: url(IMG/subs2.jpg);
+  }
+  .inputContainer{
+    text-align: center;
+  }
+  .emailBtn{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
   .nav__links,
   .cta,
   .reg {
@@ -540,26 +661,17 @@ span {
   }
   .reg1 {
     margin-top: 15px;
+    flex-direction: column;
+  }
+  .mainLang {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
   }
   .hero {
     background-image: url(IMG/BG\ medium\ photo.jpg);
   }
-  .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    padding-left: 0;
-  }
-  .system {
-    justify-content: center !important;
-    align-items: center !important;
-    background-image: url(IMG/system2.jpg);
-  }
-  
-}
-
-@media only screen and (max-width: 1250px) {
   .aboutValhala {
     flex-direction: column;
     justify-content: center;
@@ -596,6 +708,7 @@ span {
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
+    
   }
   .rightContainer {
     width: 100%;
