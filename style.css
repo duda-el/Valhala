@@ -460,7 +460,7 @@ h6 {
 }
 .thumbnail {
   position: absolute;
-  bottom: 1px;
+  bottom: 20px;
   z-index: 11;
   display: flex;
   gap: 10px;
@@ -635,6 +635,22 @@ input{
   transform: scale(0.96);
 }
 
+@media screen and (max-width: 400px){
+  .thumbnail {
+    justify-content: start;
+  }
+  .slider .list .item .content h2 {
+    font-size: 50px;
+  }
+  .slider .list .item .content p {
+    font-size: 12.5px;
+  }
+  .arrows {
+    display: none;
+  }
+}
+
+
 @media screen and (max-width: 700px) {
   .hero {
     background-image: url(IMG/BG\ small\ photo.jpg) !important;
@@ -758,19 +774,19 @@ input{
     align-items: center;
     gap: 0;
   }
-
   .thumbnail {
     justify-content: start;
   }
   .slider .list .item .content h2 {
-    font-size: 50px;
+    font-size: 60px;
   }
   .slider .list .item .content p {
-    font-size: 12.5px;
+    font-size: 19px;
   }
   .arrows {
-    top: 10%;
+    display: none;
   }
+
 }
 
 @media only screen and (max-width: 1000px) {
