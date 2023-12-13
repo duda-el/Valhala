@@ -169,20 +169,20 @@ header {
 
 h1 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 90px;
+  font-size: 130px;
   color: white;
   font-weight: 100;
 }
 h3 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 25px;
+  font-size: 35px;
   color: white;
   font-weight: 100;
 }
 
 .btn {
   margin-top: 50px;
-  width: 280px;
+  width: 320px;
   height: 60px;
   border-radius: 6px;
   color: #3db8a5;
@@ -232,10 +232,9 @@ h4 {
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding-left: 130px;
-  padding-right: 130px;
+  gap: 150px;
 }
 
 .leftContainer {
@@ -283,12 +282,12 @@ h6 {
   align-items: center;
 }
 
-.slider {
+.sliderr {
   display: flex;
   gap: 40px;
 }
 
-.item {
+.item01 {
   width: 450px;
   height: 500px;
   border: 2px solid #3db8a5;
@@ -352,13 +351,150 @@ h6 {
 .features {
   width: 100%;
   min-height: 100vh;
-  background-image: url(IMG/Features.jpg);
+  background-image: url(IMG/vid.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
 }
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.slider .list .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.slider .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider .list .item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, #000 20%, transparent);
+}
+.slider .list .item .content {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  width: 500px;
+  max-width: 80%;
+  z-index: 1;
+}
+.slider .list .item .content p:nth-child(1) {
+  text-transform: uppercase;
+  letter-spacing: 18px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+.slider .list .item .content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: white;
+}
+.slider .list .item .content h2 {
+  font-family: "Bebas Neue", sans-serif ;
+  font-size: 80px;
+  color: white;
+  margin: 0;
+}
+.slider .list .item.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+@keyframes showContent {
+  to {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3) {
+  transform: translateY(30px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
+}
+.slider .list .item.active h2 {
+  animation-delay: 1s;
+}
+.slider .list .item.active p:nth-child(3) {
+  animation-duration: 1.3s;
+}
+.arrows {
+  position: absolute;
+  top: 30%;
+  right: 50px;
+  z-index: 100;
+}
+.arrows button {
+  background-color: #eee5;
+  border: none;
+  font-family: monospace;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: x-large;
+  color: #eee;
+  transition: 0.5s;
+}
+.arrows button:hover {
+  background-color: #eee;
+  color: black;
+}
+.thumbnail {
+  position: absolute;
+  bottom: 1px;
+  z-index: 11;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 250px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  overflow: auto;
+  justify-content: center;
+}
+.thumbnail::-webkit-scrollbar {
+  width: 0;
+}
+.thumbnail .item {
+  width: 150px;
+  height: 220px;
+  filter: brightness(0.5);
+  transition: 0.5s;
+  flex-shrink: 0;
+}
+.thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.thumbnail .item.active {
+  filter: brightness(1.5);
+}
+.thumbnail .item .content {
+  position: absolute;
+  inset: auto 10px 10px 10px;
+}
+
 
 .system {
   width: 100%;
@@ -394,18 +530,20 @@ h6 {
   font-weight: 100;
 }
 .box {
-  padding-top: 70px;
-  padding-left: 70px;
+  display: flex;
+  margin-left: 70px;
+  align-items: center;
+  margin-top: 70px;
 }
 .lines {
-  width: 500px;
-  height: 350px;
+  width: 643px;
+  height: 450px;
   background-image: url(IMG/Box.svg);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
 }
 
 span {
@@ -416,14 +554,13 @@ span {
   padding-left: 12px;
   padding-top: 12px;
   display: flex;
-  gap: 12px;
 }
 
 .first p {
-  width: 230px;
+  width: 640px;
   font-family: "Poppins", sans-serif;
   color: white;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .subs{
@@ -445,14 +582,14 @@ span {
 .small{
   font-family: "Bebas Neue", sans-serif;
   color: white;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 100;
 }
 
 .big{
   font-family: "Bebas Neue", sans-serif;
   color: white;
-  font-size: 80px;
+  font-size: 100px;
   font-weight: 100;
 }
 
@@ -460,7 +597,7 @@ span {
   width: 600px;
   font-family: "Poppins", sans-serif;
   color: white;
-  font-size: 15px;
+  font-size: 18px;
 }
 .emailBtn{
   display: flex;
@@ -468,20 +605,20 @@ span {
 }
 
 input{
-  width: 280px;
-  height: 50px;
+  width: 320px;
+  height: 55px;
   background-color: #1B1D1E;
   border: 0;
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
-  color: #7F8081;
+  color: white;
   padding-left: 20px;
   margin-top: 40px;
 }
 
 .btn2{
-  width: 150px;
-  height: 50px;
+  width: 170px;
+  height: 55px;
   background-color: #3db8a5;
   border: 0;
   border-radius: 5px;
@@ -490,6 +627,12 @@ input{
   font-weight: 600;
   margin-top: 40px;
   cursor: pointer;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.btn2:active{
+  transform: scale(0.96);
 }
 
 @media screen and (max-width: 700px) {
@@ -540,7 +683,7 @@ input{
     align-items: center;
     gap: 10px;
   }
-  .item {
+  .item01 {
     width: 100%;
     height: 350px;
     border-radius: 0;
@@ -555,7 +698,7 @@ input{
     height: 350px;
     border-radius: 0;
   }
-  .slider {
+  .sliderr {
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -568,15 +711,18 @@ input{
     display: none;
   }
   .lines {
-    width: 359px;
-    height: 252px;
-    gap: 10px;
+    width: 350px !important;
+    height: 245px !important;
+    gap: 10px !important;
   }
   .first p {
-    width: 155px;
+    width: 280px !important;
     font-family: "Poppins", sans-serif;
     color: white;
-    font-size: 11px;
+    font-size: 9px !important;
+  }
+  .first{
+    gap: 0 !important;
   }
   .question {
     font-size: 20px;
@@ -612,6 +758,19 @@ input{
     align-items: center;
     gap: 0;
   }
+
+  .thumbnail {
+    justify-content: start;
+  }
+  .slider .list .item .content h2 {
+    font-size: 50px;
+  }
+  .slider .list .item .content p {
+    font-size: 11px;
+  }
+  .arrows {
+    top: 10%;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -621,6 +780,8 @@ input{
     align-items: center;
     padding-top: 50px;
     padding-left: 0;
+    margin-left: 0;
+    gap: 20px;
   }
   .system {
     justify-content: center !important;
@@ -635,6 +796,8 @@ input{
   }
   .inputContainer{
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
   .emailBtn{
     display: flex;
@@ -694,7 +857,7 @@ input{
   }
 
   h6 {
-    font-size: 70px;
+    font-size: 60px;
     padding-left: 10px;
   }
 
@@ -716,7 +879,7 @@ input{
     align-items: center;
     gap: 10px;
   }
-  .item {
+  .item01 {
     width: 400px;
     height: 400px;
   }
@@ -727,5 +890,27 @@ input{
   .item2 {
     width: 400px;
     height: 400px;
+  }
+
+}
+
+@media only screen and (max-width: 1550px) {
+  h1{
+    font-size: 90px;
+  }
+  h3{
+    font-size: 25px;
+  }
+  .lines{
+    width: 500px;
+    height: 350px;
+    gap: 20px;
+  }
+  .first p{
+    width: 230px;
+    font-size: 16px;
+  }
+  .first{
+    gap: 12px;
   }
 }
