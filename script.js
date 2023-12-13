@@ -11,6 +11,7 @@ menuClose.addEventListener("click", () => {
   overlay.classList.remove("overlay--active");
 });
 
+
 //Page Links
 document.addEventListener("DOMContentLoaded", function () {
   const scrollDownLink = document.getElementById("scrollDownLink");
@@ -34,6 +35,40 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const navAbout = document.getElementById("assasin");
+  const aboutValhalaSection = document.getElementById("asShow");
+
+  if (navAbout && aboutValhalaSection) {
+    navAbout.addEventListener("click", function () {
+      aboutValhalaSection.scrollIntoView({ behavior: "smooth" });
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navAbout = document.getElementById("systems");
+  const aboutValhalaSection = document.getElementById("reques");
+
+  if (navAbout && aboutValhalaSection) {
+    navAbout.addEventListener("click", function () {
+      aboutValhalaSection.scrollIntoView({ behavior: "smooth" });
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navAbout = document.getElementById("sub");
+  const aboutValhalaSection = document.getElementById("foot");
+
+  if (navAbout && aboutValhalaSection) {
+    navAbout.addEventListener("click", function () {
+      aboutValhalaSection.scrollIntoView({ behavior: "smooth" });
+    });
+  }
+});
+
+
 //Reveal Animations
 ScrollReveal().reveal(".hero", { delay: 50 });
 ScrollReveal().reveal(".mainSec", { delay: 300 });
@@ -46,6 +81,7 @@ ScrollReveal().reveal(".box", { delay: 1000 });
 ScrollReveal().reveal(".inputContainer", { delay: 500 });
 ScrollReveal().reveal(".emailBtn", { delay: 500 });
 ScrollReveal().reveal(".item", { delay: 500 });
+
 
 //Slider
 document.addEventListener("DOMContentLoaded", function () {
@@ -111,6 +147,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
 
 //SlideShow
 let items = document.querySelectorAll(".slider .list .item");
