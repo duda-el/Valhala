@@ -45,13 +45,13 @@ ScrollReveal().reveal(".text", { delay: 500 });
 ScrollReveal().reveal(".box", { delay: 1000 });
 ScrollReveal().reveal(".inputContainer", { delay: 500 });
 ScrollReveal().reveal(".emailBtn", { delay: 500 });
-
+ScrollReveal().reveal(".item", { delay: 500 });
 
 //Slider
 document.addEventListener("DOMContentLoaded", function () {
   const prevButton = document.getElementById("prev");
   const nextButton = document.getElementById("next");
-  const img1 = document.querySelector(".item");
+  const img1 = document.querySelector(".item01");
   const img2 = document.querySelector(".item1");
   const img3 = document.querySelector(".item2");
 
@@ -109,5 +109,55 @@ document.addEventListener("DOMContentLoaded", function () {
       showImage(currentIndex);
       restartInterval();
     });
+  });
+});
+
+//SlideShow
+let items = document.querySelectorAll(".slider .list .item");
+let next = document.getElementById("next2");
+let prev = document.getElementById("prev2");
+let thumbnails = document.querySelectorAll(".thumbnail .item");
+
+let countItem = items.length;
+let itemActive = 0;
+
+next.onclick = function () {
+  itemActive = itemActive + 1;
+  if (itemActive >= countItem) {
+    itemActive = 0;
+  }
+  showSlider();
+};
+
+prev.onclick = function () {
+  itemActive = itemActive - 1;
+  if (itemActive < 0) {
+    itemActive = countItem - 1;
+  }
+  showSlider();
+};
+
+let refreshInterval = setInterval(() => {
+  next.click();
+}, 5000);
+function showSlider() {
+  let itemActiveOld = document.querySelector(".slider .list .item.active");
+  let thumbnailActiveOld = document.querySelector(".thumbnail .item.active");
+  itemActiveOld.classList.remove("active");
+  thumbnailActiveOld.classList.remove("active");
+
+  items[itemActive].classList.add("active");
+  thumbnails[itemActive].classList.add("active");
+
+  clearInterval(refreshInterval);
+  refreshInterval = setInterval(() => {
+    next.click();
+  }, 5000);
+}
+
+thumbnails.forEach((thumbnail, index) => {
+  thumbnail.addEventListener("click", () => {
+    itemActive = index;
+    showSlider();
   });
 });
