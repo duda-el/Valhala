@@ -19,9 +19,73 @@
     />
     <link rel="shortcut icon" type="image/x-icon" href="IMG/icon.png" />
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <section class="hero">
+      <div class="singContainer">
+        <button class="close1">X</button>
+
+        <div class="signin">
+          <div class="content">
+            <h2>Sign In</h2>
+
+            <div class="form">
+              <div class="inputBox">
+                <input type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address"> <i>Email</i>
+              </div>
+              <div id="error" style="color: red; font-family: Poppins, sans-serif; display: none;">Input value can't be empty!</div>
+              <div class="inputBox">
+                <input type="password" required /> <i>Password</i>
+              </div>
+              <div id="error" style="color: red; font-family: Poppins, sans-serif; display: none;">Input value can't be empty!</div>
+
+              <div class="links">
+                <a href="#"><u>Sign Up</u></a>
+              </div>
+
+              <div class="inputBox">
+                <input type="submit" value="Sign In" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="singUpContainer">
+        <button class="closeSignUp">X</button>
+        <div class="signup">
+            <div class="content">
+                <h2>Sign Up</h2>
+                <div class="form">
+                    <div class="inputBox">
+                        <input type="text" required>
+                        <i>Username</i>
+                    </div>
+                    <div class="error" style="color: red; font-family: Poppins, sans-serif; display: none;">Input value can't be empty!</div>
+                    <div class="inputBox">
+                        <input type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
+                        <i>Email</i>
+                    </div>
+                    <div class="error" style="color: red; font-family: Poppins, sans-serif; display: none;">Input value can't be empty!</div>
+                    <div class="inputBox">
+                        <input type="password" required>
+                        <i>Password</i>
+                    </div>
+                    <div class="error" style="color: red; font-family: Poppins, sans-serif; display: none;">Input value can't be empty!</div>
+                    <div class="links">
+                        <a href="#"><u>Sign In</u></a>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Sign Up">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      
+
       <header>
         <a class="logo" href="#"></a>
         <nav>
@@ -59,7 +123,6 @@
       <div class="overlay">
         <a class="close">&times;</a>
         <div class="overlay__content">
-          
           <div class="reg1">
             <div class="mainLang">
               <div class="lang">
@@ -68,7 +131,7 @@
               </div>
               <div class="line"></div>
               <div class="lang">
-                <a href="#" style="font-size: 17px">Sign Up</a>
+                <a href="#" style="font-size: 17px">Sign In</a>
                 <div class="drop"></div>
               </div>
             </div>
@@ -130,100 +193,98 @@
       </div>
     </section>
 
-    
-      <div class="slider" id="asShow">
-        <!-- list Items -->
-        <div class="list">
-          <div class="item active">
-            <img src="IMG/origins.jpg" />
-            <div class="content">
-              <p>UBISOFT</p>
-              <h2>ASSASINS'S CREED ORIGINS</h2>
-              <p>
-                Principally set in Egypt, near the end of the Ptolemaic period
-                from 49 to 43 BC, the story follows a Medjay named Bayek of Siwa
-                and his wife Aya as they seek revenge for the murder of their son.
-              </p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="IMG/odyssey.jpg" />
-            <div class="content">
-              <p>UBISOFT</p>
-              <h2>ASSASINS'S CREED ODYSSEY</h2>
-              <p>
-                Players control a Spartan mercenary, who fights on both sides of
-                the conflict as they attempt to find their family and eliminate
-                the mysterious Cult of Kosmos.
-              </p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="IMG/mirage.jpg" />
-            <div class="content">
-              <p>UBISOFT</p>
-              <h2>ASSASINS'S CREED MIRAGE</h2>
-              <p>
-                Street thief who joins the Hidden Ones to fight for peace and
-                liberty, against the Order of the Ancients, who desire peace
-                through control.
-              </p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="IMG/unity.jpg" />
-            <div class="content">
-              <p>UBISOFT</p>
-              <h2>ASSASINS'S CREED UNITY</h2>
-              <p>
-                Main story is set in Paris during the French Revolution from
-                1789 to 1794, and follows Assassin Arno Dorian and his efforts to
-                expose the true powers behind the Revolution, while seeking
-                revenge against those responsible for his adoptive father's
-                murder.
-              </p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="IMG/3.png" />
-            <div class="content">
-              <p>UBISOFT</p>
-              <h2>ASSASINS'S CREED III</h2>
-              <p>
-                The main narrative of the game follows Ratonhnaké:ton, also known
-                as Connor, an 18th-century Assassin from Colonial America, and his
-                involvement in various events during the American Revolution and
-                the Revolutionary War.
-              </p>
-            </div>
+    <div class="slider" id="asShow">
+      <!-- list Items -->
+      <div class="list">
+        <div class="item active">
+          <img src="IMG/origins.jpg" />
+          <div class="content">
+            <p>UBISOFT</p>
+            <h2>ASSASINS'S CREED ORIGINS</h2>
+            <p>
+              Principally set in Egypt, near the end of the Ptolemaic period
+              from 49 to 43 BC, the story follows a Medjay named Bayek of Siwa
+              and his wife Aya as they seek revenge for the murder of their son.
+            </p>
           </div>
         </div>
-        <!-- button arrows -->
-        <div class="arrows">
-          <button id="prev2" style="cursor: pointer;"><</button>
-          <button id="next2" style="cursor: pointer;">></button>
+        <div class="item">
+          <img src="IMG/odyssey.jpg" />
+          <div class="content">
+            <p>UBISOFT</p>
+            <h2>ASSASINS'S CREED ODYSSEY</h2>
+            <p>
+              Players control a Spartan mercenary, who fights on both sides of
+              the conflict as they attempt to find their family and eliminate
+              the mysterious Cult of Kosmos.
+            </p>
+          </div>
         </div>
-        <!-- thumbnail -->
-        <div class="thumbnail">
-          <div class="item active" style="cursor: pointer;">
-            <img src="IMG/originLogo.jpg" />
+        <div class="item">
+          <img src="IMG/mirage.jpg" />
+          <div class="content">
+            <p>UBISOFT</p>
+            <h2>ASSASINS'S CREED MIRAGE</h2>
+            <p>
+              Street thief who joins the Hidden Ones to fight for peace and
+              liberty, against the Order of the Ancients, who desire peace
+              through control.
+            </p>
           </div>
-          <div class="item" style="cursor: pointer;">
-            <img src="IMG/odysseyLogo.jpg" />
+        </div>
+        <div class="item">
+          <img src="IMG/unity.jpg" />
+          <div class="content">
+            <p>UBISOFT</p>
+            <h2>ASSASINS'S CREED UNITY</h2>
+            <p>
+              Main story is set in Paris during the French Revolution from 1789
+              to 1794, and follows Assassin Arno Dorian and his efforts to
+              expose the true powers behind the Revolution, while seeking
+              revenge against those responsible for his adoptive father's
+              murder.
+            </p>
           </div>
-          <div class="item" style="cursor: pointer;">
-            <img src="IMG/mirageLogo.jpg" />
-          </div>
-          <div class="item" style="cursor: pointer;">
-            <img src="IMG/unityLogo.jpg" />
-          </div>
-          <div class="item" style="cursor: pointer;">
-            <img src="IMG/3Logo.jpg" />
+        </div>
+        <div class="item">
+          <img src="IMG/3.png" />
+          <div class="content">
+            <p>UBISOFT</p>
+            <h2>ASSASINS'S CREED III</h2>
+            <p>
+              The main narrative of the game follows Ratonhnaké:ton, also known
+              as Connor, an 18th-century Assassin from Colonial America, and his
+              involvement in various events during the American Revolution and
+              the Revolutionary War.
+            </p>
           </div>
         </div>
       </div>
-      
-    
+      <!-- button arrows -->
+      <div class="arrows">
+        <button id="prev2" style="cursor: pointer"><</button>
+        <button id="next2" style="cursor: pointer">></button>
+      </div>
+      <!-- thumbnail -->
+      <div class="thumbnail">
+        <div class="item active" style="cursor: pointer">
+          <img src="IMG/originLogo.jpg" />
+        </div>
+        <div class="item" style="cursor: pointer">
+          <img src="IMG/odysseyLogo.jpg" />
+        </div>
+        <div class="item" style="cursor: pointer">
+          <img src="IMG/mirageLogo.jpg" />
+        </div>
+        <div class="item" style="cursor: pointer">
+          <img src="IMG/unityLogo.jpg" />
+        </div>
+        <div class="item" style="cursor: pointer">
+          <img src="IMG/3Logo.jpg" />
+        </div>
+      </div>
+    </div>
+
     <section class="system" id="reques">
       <div class="text">
         <p class="question">CAN MY COMPUTER RUN THIS GAME?</p>
@@ -286,9 +347,11 @@
           />
           <button class="btn2">Subscribe Now</button>
         </div>
+        <div id="successMessage" style="display: none;">Email saved successfully!</div>
       </div>
     </section>
 
+    <script src="sign.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
