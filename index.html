@@ -22,6 +22,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+    <script>
+      $(window).on("load", function () {
+        $(".loader-container").fadeOut(1000, function () {
+          $(".page-content").fadeIn(500);
+        });
+      });
+    </script>
+
     <section class="hero">
       <div class="singContainer">
         <button class="close1">X</button>
@@ -32,13 +43,37 @@
 
             <div class="form">
               <div class="inputBox">
-                <input type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address"> <i>Email</i>
+                <input
+                  type="text"
+                  required
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  title="Please enter a valid email address"
+                />
+                <i>Email</i>
               </div>
-              <div id="error" style="color: red; font-family: Poppins, sans-serif; display: none;">Input value can't be empty!</div>
+              <div
+                id="error"
+                style="
+                  color: red;
+                  font-family: Poppins, sans-serif;
+                  display: none;
+                "
+              >
+                Input value can't be empty!
+              </div>
               <div class="inputBox">
                 <input type="password" required /> <i>Password</i>
               </div>
-              <div id="error" style="color: red; font-family: Poppins, sans-serif; display: none;">Input value can't be empty!</div>
+              <div
+                id="error"
+                style="
+                  color: red;
+                  font-family: Poppins, sans-serif;
+                  display: none;
+                "
+              >
+                Input value can't be empty!
+              </div>
 
               <div class="links">
                 <a href="#"><u>Sign Up</u></a>
@@ -55,36 +90,66 @@
       <div class="singUpContainer">
         <button class="closeSignUp">X</button>
         <div class="signup">
-            <div class="content">
-                <h2>Sign Up</h2>
-                <div class="form">
-                    <div class="inputBox">
-                        <input type="text" required>
-                        <i>Username</i>
-                    </div>
-                    <div class="error" style="color: red; font-family: Poppins, sans-serif; display: none;">Input value can't be empty!</div>
-                    <div class="inputBox">
-                        <input type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
-                        <i>Email</i>
-                    </div>
-                    <div class="error" style="color: red; font-family: Poppins, sans-serif; display: none;">Input value can't be empty!</div>
-                    <div class="inputBox">
-                        <input type="password" required>
-                        <i>Password</i>
-                    </div>
-                    <div class="error" style="color: red; font-family: Poppins, sans-serif; display: none;">Input value can't be empty!</div>
-                    <div class="links">
-                        <a href="#"><u>Sign In</u></a>
-                    </div>
-                    <div class="inputBox">
-                        <input type="submit" value="Sign Up">
-                    </div>
-                </div>
+          <div class="content">
+            <h2>Sign Up</h2>
+            <div class="form">
+              <div class="inputBox">
+                <input type="text" required />
+                <i>Username</i>
+              </div>
+              <div
+                class="error"
+                style="
+                  color: red;
+                  font-family: Poppins, sans-serif;
+                  display: none;
+                "
+              >
+                Input value can't be empty!
+              </div>
+              <div class="inputBox">
+                <input
+                  type="text"
+                  required
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  title="Please enter a valid email address"
+                />
+                <i>Email</i>
+              </div>
+              <div
+                class="error"
+                style="
+                  color: red;
+                  font-family: Poppins, sans-serif;
+                  display: none;
+                "
+              >
+                Input value can't be empty!
+              </div>
+              <div class="inputBox">
+                <input type="password" required />
+                <i>Password</i>
+              </div>
+              <div
+                class="error"
+                style="
+                  color: red;
+                  font-family: Poppins, sans-serif;
+                  display: none;
+                "
+              >
+                Input value can't be empty!
+              </div>
+              <div class="links">
+                <a href="#"><u>Sign In</u></a>
+              </div>
+              <div class="inputBox">
+                <input type="submit" value="Sign Up" />
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    
-      
+      </div>
 
       <header>
         <a class="logo" href="#"></a>
@@ -347,7 +412,9 @@
           />
           <button class="btn2">Subscribe Now</button>
         </div>
-        <div id="successMessage" style="display: none;">Email saved successfully!</div>
+        <div id="successMessage" style="display: none">
+          Email saved successfully!
+        </div>
       </div>
     </section>
 
