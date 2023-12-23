@@ -11,7 +11,6 @@ menuClose.addEventListener("click", () => {
   overlay.classList.remove("overlay--active");
 });
 
-
 //Page Links
 document.addEventListener("DOMContentLoaded", function () {
   const scrollDownLink = document.getElementById("scrollDownLink");
@@ -68,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
 //Reveal Animations
 ScrollReveal().reveal(".hero", { delay: 50 });
 ScrollReveal().reveal(".mainSec", { delay: 300 });
@@ -81,7 +79,6 @@ ScrollReveal().reveal(".box", { delay: 1000 });
 ScrollReveal().reveal(".inputContainer", { delay: 500 });
 ScrollReveal().reveal(".emailBtn", { delay: 500 });
 ScrollReveal().reveal(".item", { delay: 500 });
-
 
 //Slider
 document.addEventListener("DOMContentLoaded", function () {
@@ -148,8 +145,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 //SlideShow
 let items = document.querySelectorAll(".slider .list .item");
 let next = document.getElementById("next2");
@@ -200,3 +195,22 @@ thumbnails.forEach((thumbnail, index) => {
   });
 });
 
+$(document).ready(function () {
+  var savedEmail = localStorage.getItem("savedEmail");
+  if (savedEmail) {
+    $('input[type="email"]').val(savedEmail);
+    console.log("Email retrieved:", savedEmail);
+  }
+
+  $(".btn2").click(function (e) {
+    e.preventDefault();
+
+    var email = $('input[type="email"]').val();
+
+    localStorage.setItem("savedEmail", email);
+
+    $("#successMessage").show();
+
+    console.log("Email saved:", email);
+  });
+});
