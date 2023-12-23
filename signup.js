@@ -47,6 +47,10 @@ $(document).ready(function () {
       emailError.html("Invalid email format");
       email.css("border", "1px solid red");
     }
+    else{
+      emailError.css("display", "none");
+      email.css("border", "1px solid white");
+    }
 
     if (password.val().length === 0) {
       passwordError.css("display", "block");
@@ -57,11 +61,19 @@ $(document).ready(function () {
       passwordError.html("Password must have at least 8 characters");
       password.css("border", "1px solid red");
     }
+    else{
+      passwordError.css("display", "none");
+      password.css("border", "1px solid white");
+    }
 
     if (userName.val().length === 0) {
       usernameError.css("display", "block");
       usernameError.html("Input can't be empty");
       userName.css("border", "1px solid red");
+    }
+    else{
+      usernameError.css("display", "none");
+      userName.css("border", "1px solid white");
     }
 
     if (
