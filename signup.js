@@ -1,51 +1,107 @@
-const userName = document.getElementById("username");
-const email = document.querySelector("#signup");
-const password = document.querySelector("#password");
-const button = document.querySelector(".btn");
-const emailError = document.querySelector("#emailError");
-const passwordError = document.querySelector("#passwordError");
+$(document).ready(function () {
+  const userName = $("#username");
+  const email = $("#signup");
+  const password = $("#password");
+  const button = $(".btn");
+  const emailError = $("#emailError");
+  const passwordError = $("#passwordError");
+  const usernameError = $("#usernameError");
 
-
-function validateEmail(email) {
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailPattern.test(email);
-}
-
-button.addEventListener("click", (event) => {
-  event.preventDefault();
-
-  if (email.value.length === 0) {
-    emailError.style.display = "block";
-    emailError.innerHTML = "Input can't be empty";
-    email.style.border = "1px solid red";
-  } else if (!validateEmail(email.value)) {
-    emailError.style.display = "block";
-    emailError.innerHTML = "Invalid email format";
-    email.style.border = "1px solid red";
-  } else {
-    emailError.style.display = "none";
-    email.style.border = "1px solid white";
+  function validateEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
   }
 
-  if (password.value.length === 0) {
-    passwordError.style.display = "block";
-    passwordError.innerHTML = "Input can't be empty";
-    password.style.border = "1px solid red";
-  } else if (password.value.length > 0 && password.value.length < 8) {
-    passwordError.style.display = "block";
-    passwordError.innerHTML = "Password must have at least 8 characters";
-    password.style.border = "1px solid red";
-  } else {
-    passwordError.style.display = "none";
-    password.style.border = "1px solid white";
+  function saveUserData() {
+    const userData = {
+      username: userName.val(),
+      email: email.val(),
+      password: password.val(),
+    };
+
+    localStorage.setItem("userData", JSON.stringify(userData));
   }
 
-  if (userName.value.length === 0) {
-    usernameError.style.display = "block";
-    usernameError.innerHTML = "Input can't be empty";
-    userName.style.border = "1px solid red";
-  } else {
-    usernameError.style.display = "none";
-    userName.style.border = "1px solid white";
+  function displayStoredUserData() {
+    const storedUserData = JSON.parse(localStorage.getItem("userData"));
+    if (storedUserData) {
+      console.log(storedUserData);
+    }
   }
+
+  displayStoredUserData();
+
+  button.on("click", function (event) {
+    event.preventDefault();
+
+    emailError.css("display", "none");
+    passwordError.css("display", "none");
+    usernameError.css("display", "none");
+
+    if (email.val().length === 0) {
+      emailError.css("display", "block");
+      emailError.html("Input can't be empty");
+      email.css("border", "1px solid red");
+    } else if (!validateEmail(email.val())) {
+      emailError.css("display", "block");
+      emailError.html("Invalid email format");
+      email.css("border", "1px solid red");
+    }
+
+    if (password.val().length === 0) {
+      passwordError.css("display", "block");
+      passwordError.html("Input can't be empty");
+      password.css("border", "1px solid red");
+    } else if (password.val().length > 0 && password.val().length < 8) {
+      passwordError.css("display", "block");
+      passwordError.html("Password must have at least 8 characters");
+      password.css("border", "1px solid red");
+    }
+
+    if (userName.val().length === 0) {
+      usernameError.css("display", "block");
+      usernameError.html("Input can't be empty");
+      userName.css("border", "1px solid red");
+    }
+
+    if (
+      email.val().length > 0 &&
+      validateEmail(email.val()) &&
+      password.val().length >= 8 &&
+      userName.val().length > 0
+    ) {
+      saveUserData();
+      alert("Congratulations! You've successfully registered.");
+      displayStoredUserData();
+      window.location.href = "index.html";
+    }
+  });
+});
+
+$(document).ready(function () {
+  const signInEmail = $("#signin");
+  const signInPassword = $("#password");
+  const signInButton = $(".btn01");
+
+  signInButton.on("click", function (event) {
+    event.preventDefault();
+
+    const storedUserData = JSON.parse(localStorage.getItem("userData"));
+
+    if (!storedUserData) {
+      alert("No registered users found. Please sign up first.");
+      return;
+    }
+
+    if (
+      storedUserData.email === signInEmail.val() &&
+      storedUserData.password === signInPassword.val()
+    ) {
+      alert("Successfully logged in!");
+
+      window.location.href = "index.html";
+    } else {
+      alert("Invalid email or password. Please try again.");
+    }
+  });
 });
